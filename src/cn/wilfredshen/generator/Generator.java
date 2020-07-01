@@ -42,7 +42,6 @@ public class Generator {
                 sb.append(map[Math.toIntExact(offset % size)]);
             }
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
             return null;
         }
         return sb.toString();
