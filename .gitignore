@@ -2,3 +2,6 @@
 .idea/
 *.iml
 out/
+
+### Java
+META-INF/
