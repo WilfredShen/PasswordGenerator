@@ -34,7 +34,7 @@ public class Main {
         options.addOption("D", "disable", true,
                 "[可选]禁用指定的字符。\n|- 可以禁用 -E 启用的字符。\n|- 允许禁用集合中不存在的字符。\n|- 例：-m 1 -D Ae3A，则字符集为 B-Z。\n|--------");
 
-        CommandLine cli = null;
+        CommandLine cli;
         CommandLineParser clip = new DefaultParser();
         HelpFormatter hf = new HelpFormatter();
 
@@ -53,7 +53,7 @@ public class Main {
         // 解析 key
         PasswordOptions passwordOptions = new PasswordOptions();
         String path = cli.getOptionValue("k");
-        byte[] key = null;
+        byte[] key;
         if (cli.hasOption("f")) {
             File file = new File(path);
             try {
